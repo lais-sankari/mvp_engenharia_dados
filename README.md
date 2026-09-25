@@ -269,6 +269,7 @@ O modelo dimensional permite responder às perguntas com poucos JOINs e sem repe
 O JOIN com `dim_periodo` usa igualdade null-safe (`<=>`) e o filtro `mes IS NULL`, garantindo que dados anuais casem apenas com períodos anuais e trimestrais apenas com trimestrais.
 
 **4.4 Análise — `04_analise.sql`**
+
 Consultas por pergunta, incluindo ranking com `RANK()`, comparações por agregação condicional, linha de base pré-guerra e correlação com `corr()` e defasagem com `LAG()`.
 
 ---
