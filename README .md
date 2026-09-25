@@ -121,7 +121,7 @@ A camada Gold trabalha com uma constelação de fatos. A escolha de usar a const
 
 Colocar tudo em uma única tabela fato misturaria granularidades anuais, trimestrais e mensais e geraria colunas quase sempre nulas. As dimensões `dim_territorio`, `dim_periodo`, `dim_setor` e `dim_fonte` são compartilhadas; `dim_periodo` tem granularidade mista (anual, trimestral e mensal).
 
-![modelo_constelação](outras_imagens_png/02.modelo_constelação.png)
+![modelo_constelação](outras_imagens_png/02.modelo_constelação.png)
 
 As dimensões têm `PRIMARY KEY` (chaves substitutas geradas com `GENERATED ALWAYS AS IDENTITY`) e as tabelas fato têm `FOREIGN KEY` informativas no Unity Catalog.
 
