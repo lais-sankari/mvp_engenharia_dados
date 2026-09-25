@@ -293,7 +293,7 @@ A análise foi feita em duas etapas; perfilamento dos dados brutos no fim do not
 - Classificações setoriais incompatíveis: o relatório do World Bank usa setores próximos da ISIC; a pesquisa do CBS agrupa setores de outra forma (ex.: "high-tech e finanças"). Dessa forma, não foram forçados na mesma `dim_setor` (o que exigiria um mapeamento arbitrário); os setores israelenses ficaram como recorte degenerado em `fato_pesquisa_negocios`, e a comparação entre os lados é qualitativa.
 - Métricas de natureza diferente: Percentual de negócios afetados (Israel) não é comparável numericamente com variação percentual do PIB setorial (Palestina). Isso foi explicitado na análise.
 
-![consistência_de_dados](analise_de_dados.png/consistência_bronze.png)
+![consistência_de_dados](analise_de_dados.png/consistência_bronze.png)
 
 **5.3 Unicidade**
 - Por serem transcritos manualmente, os dados foram verificados por chave natural (`GROUP BY ... HAVING COUNT(*) > 1`) em PIB, desemprego e trabalho mensal. O resultado esperado é que não ocorra nenhuma duplicata. O `COPY INTO` impede duplicação em reexecuções.
