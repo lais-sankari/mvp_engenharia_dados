@@ -307,7 +307,7 @@ A análise foi feita em duas etapas; perfilamento dos dados brutos no fim do not
 - Efeito sazonal confundido com efeito da guerra: no comunicado 380/2023, o setor "saúde, bem-estar, artes e outros serviços" piorou de outubro para novembro (42% → 62% com queda severa de receita). O próprio CBS atribui parte disso à sazonalidade (período pré-Hanucá/Chanucá) e à queda de procedimentos eletivos; o dado foi interpretado com essa ressalva.
 - Dois níveis de confiança na transcrição do comunicado 380/2023. A fonte é em hebraico, com números embutidos em texto corrido e em 9 gráficos de barra, sem tabela central. Parte dos valores foi confirmada por uma frase explícita do texto ( "כ40%- ... ירידה לעומת 59%" confirma Sul: 59%→40%; Tel Aviv ~10%, Construção 73%→44%, Alimentação/Bebidas 71%→37%, High-tech/Finanças 9%). Outros três valores distritais — Haifa (39%→23%), Centro (38%→20%) e Jerusalém/Judeia e Samaria (42%→26%) — foram lidos diretamente das barras do Gráfico 2 do comunicado, sem uma frase equivalente no texto que os confirmasse de forma independente. Ambos os grupos de dados vêm da mesma fonte oficial (Central Bureau of Statistics); a diferença é apenas o grau de confirmação cruzada disponível dentro do próprio documento, e está sinalizada aqui para transparência, sem que isso tenha motivado a busca por outra fonte, já que todos os dados foram retirados das fontes oficiais do governo de Israel.
 
-![acurácia_de_dados](analise_de_dados.png/acurácia_silver.png)
+![acurácia_de_dados](analise_de_dados.png/acurácia_silver.png)
 
 
 ### Outliers
