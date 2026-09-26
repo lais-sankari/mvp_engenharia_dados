@@ -6,7 +6,7 @@
 **Plataforma de nuvem:** Databricks Free Edition (Lakehouse com Delta Lake e Unity Catalog)
 
 **Linguagem do pipeline:** SQL (Databricks SQL), organizado na Arquitetura Medalhão
-]
+
 
 
 
@@ -41,7 +41,7 @@ Pipeline em SQL, arquitetura Bronze/Silver/Gold, 6 fontes ingeridas (mais 1 cita
 
 **1.1 Contexto**
 
-A guerra que eclodiu em outubro de 2023 afetou as economias de Israel, da Cisjordânia e da Faixa de Gaza de formas diferentes. O objetivo deste trabalho é medir, com indicadores oficiais e comparáveis, se e quanto a atividade econômica e comercial de cada território foi afetada em 2024 (ano posterior à eclosão). Para isso, será criado um pipeline de dados na nuvem que parte de fontes brutas heterogêneas (tabelas web e relatórios em PDF, em inglês e hebraico) e chega a um modelo dimensional pronto para consulta.
+A guerra que eclodiu em outubro de 2023 afetou as economias de Israel, da Cisjordânia e da Faixa de Gaza de formas diferentes. O objetivo deste trabalho é medir, com indicadores oficiais e comparáveis, se e quanto a atividade econômica e comercial de cada território foi afetada em 2024 (ano posterior à eclosão). Para isso, será criado um pipeline de dados na nuvem que parte de fontes brutas heterogêneas (tabelas web e relatórios em PDF, em inglês e hebraico) e chegar a um modelo dimensional pronto para consulta.
 
 **1.2 Perguntas de negócio**
 
@@ -100,7 +100,7 @@ Os números das fontes 1–6 foram transcritos das tabelas originais para arquiv
 
 3. **Ingestão:** cada arquivo é carregado em uma tabela Delta da camada Bronze com `COPY INTO` (inferência de schema com `mergeSchema`).
 
-4. **Análise exploratória da Bronze:** antes de serem transformados, os dados brutos passam por uma análise inicial (volume por tabela, grafias de território, nulos, mínimos e máximos, impacto dos filtros planejados e duplicatas). Cada transformação da Silver é justificada por uma dessas evidências.
+4. **Análise exploratória da Bronze:** antes de serem transformados, os dados brutos passam por uma análise inicial (volume por tabela, grafias de território, nulos, mínimos e máximos, impacto dos filtros planejados e duplicatas). Cada transformação da camada Silver é justificada por uma dessas evidências.
 
 ![raw_files](outras_imagens_png/01.raw_files.png)
 
@@ -370,7 +370,7 @@ A análise foi feita em duas etapas; perfilamento dos dados brutos no fim do not
 
 **Discussão:** na Cisjordânia, os setores mais atingidos foram construção (−42%) e transporte (−32%), ligados à perda de acesso ao mercado de trabalho israelense e às restrições de circulação; administração pública (−10%) e agricultura (−11%) foram os mais resilientes. Em Gaza, todos os setores caíram mais de 60%. A coluna de diferença revela o ponto mais importante; as maiores diferenças entre os dois territórios estão justamente nos setores que resistiram na Cisjordânia (finanças, agricultura, administração pública). Ou seja, em Gaza não houve setor protegido, o que condiz com os dados empíricos sobre a intensidade do conflito, que afetou a região de forma mais intensa que a Cisjordânia. 
 
-**Contexto do lado israelense** (citado de Debowy, Epstein e Weiss, Taub Center, dez/2024, com dados do CBS): o padrão foi de realocação, não colapso. Entre os primeiros semestres de 2023 e 2024, saúde (+34 mil empregos) e educação (+22 mil) cresceram, enquanto hotelaria e alimentação (−19 mil) e informação e comunicação fora do high-tech (−15 mil) encolheram. O saldo total foi de +33 mil vagas, contra +165 mil no mesmo intervalo dos dois anos anteriores. Israel foi, desse modo, menos afetada que as regiões da Cisjordânia e de Gaza. 
+**Contexto do lado israelense** (citado de Debowy, Epstein e Weiss, Taub Center, dez/2024, com dados do CBS): o padrão foi de realocação, não colapso. Entre os primeiros semestres de 2023 e 2024, saúde (+34 mil empregos) e educação (+22 mil) cresceram, enquanto hotelaria e alimentação (−19 mil) e informação e comunicação fora do high-tech (−15 mil) encolheram. O saldo total foi de +33 mil vagas, contra +165 mil no mesmo intervalo dos dois anos anteriores. Israel foi, desse modo, menos afetado que as regiões da Cisjordânia e de Gaza. 
 
 **6.3 Evolução da taxa de desemprego** respondida (exceto Gaza após 2022)
 
